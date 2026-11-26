@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 30,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "debug-clang",
+      "displayName": "Debug (Clang + libc++ + Ninja, system SDL3)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_CXX_FLAGS": "-fno-exceptions -fno-rtti -stdlib=libc++ -Wall -Wextra -Wpedantic -Wconversion",
+        "USE_SYSTEM_SDL3": "ON",
+        "SDL3_LINKAGE": "shared"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug-clang",
+      "configurePreset": "debug-clang"
+    }
+  ]
+}
