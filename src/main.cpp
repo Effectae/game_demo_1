@@ -2,6 +2,8 @@
 #include <SDL3/SDL_events.h>
 #include <SDL3/SDL_video.h>
 
+import vulkan;
+
 auto main(int argc, char const* const argv[]) -> int {
   SDL_Window* window;
   bool done{};

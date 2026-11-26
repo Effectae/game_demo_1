@@ -17,7 +17,9 @@
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
         "CMAKE_CXX_FLAGS": "-fno-exceptions -fno-rtti -stdlib=libc++ -Wall -Wextra -Wpedantic -Wconversion",
         "USE_SYSTEM_SDL3": "ON",
-        "SDL3_LINKAGE": "shared"
+        "SDL3_LINKAGE": "shared",
+
+        "VULKAN_HPP_BUILD_CXX_MODULE": "ON"
       }
     }
   ],
